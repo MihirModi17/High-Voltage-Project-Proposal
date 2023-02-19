@@ -35,6 +35,19 @@ This GitHub repo is a template. You can clone a copy of this repo into your team
 # Wrapping up
 When you have completed your proposal, make sure all changes have been committed to your repo and then upload a PDF version to Canvas.
 
+# Hi Team
+We are going to be covering what parts of this proposal everyone needs to cover and write. Most of this will be on/was on Sunday, if you have any questions, let me know in the group chat. Make your changes to the main.tex file in your branch and make sure everything is saved to your branch on GitHub everytime you add to it.
+
+Report Tasks:
+[ ] Abstract ( <100 words)
+[ ] Intro    (3-4 pragraphs)
+[ ] Features 
+[ ] Problem Statement
+[ ] Problem Solution
+[ ] Conclusion
+[ ] Images included (double check on Friday)
+[ ] Citation included (double check on Friday)
+
 ## Task List:
 - [ ] Meet with your group
 - [ ] Come up with an awesome idea
