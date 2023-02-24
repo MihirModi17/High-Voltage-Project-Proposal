@@ -16,7 +16,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-          working_directory: High-Voltage-Project-Proposal
+          working_directory: 
       - name: Commit files
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
