@@ -39,20 +39,20 @@ When you have completed your proposal, make sure all changes have been committed
 We are going to be covering what parts of this proposal everyone needs to cover and write. Most of this will be on/was on Sunday, if you have any questions, let me know in the group chat. Make your changes to the main.tex file in your branch and make sure everything is saved to your branch on GitHub everytime you add to it.
 
 ## Report Tasks:
-- [ ] Abstract ( <100 words)
-- [ ] Intro    (3-4 pragraphs)
-- [ ] Features 
-- [ ] Problem Statement
-- [ ] Problem Solution
-- [ ] Conclusion
-- [ ] Images included (double check on Friday)
-- [ ] Citation included (double check on Friday)
+- [x] Abstract ( <100 words)
+- [x] Intro    (2 pragraphs)
+- [x] Features 
+- [x] Problem Statement
+- [x] Problem Solution
+- [x] Conclusion
+- [x] Image included (double check on Friday)
+- [x] Citation included (double check on Friday)
 
 ## Task List:
-- [ ] Meet with your group
-- [ ] Come up with an awesome idea
-- [ ] Write your proposal
-- [ ] For the love that is all good and holy have someone else read your proposal (and edit accordingly)
-- [ ] Update your repo (You do not need a pull request)
-- [ ] Submit the PDF version to Canvas
+- [x] Meet with your group
+- [x] Come up with an awesome idea
+- [x] Write your proposal
+- [x] For the love that is all good and holy have someone else read your proposal (and edit accordingly)
+- [x] Update your repo (You do not need a pull request)
+- [x] Submit the PDF version to Canvas
 
