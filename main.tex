@@ -119,23 +119,22 @@
     \textsc{\large Computational Techniques for Aerospace Design}\\[0.2 cm]
 	\textsc{\Large AERE 361}\\[0.5 cm]				% Course Code
 	\textsc{\Large Project Proposal}\\[0.2 cm]
-	\textsc{\Large TEAM NAME HERE}\\[0.2 cm]
+	\textsc{\Large High Voltage}\\[0.2 cm]
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	%{ \huge \bfseries \thetitle}\\
 	
 	
 	\begin{minipage}{0.8\textwidth}
 		
-			\begin{flushleft} 
-			\emph{Team Member Names :} \\
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
+			\begin{center}			    
+			\emph{Team Member Names:} \\
+                Jani, Moksh\linebreak
+			Kacmarynski, Wyatt\linebreak
+			Latcham, Wren\linebreak
+			Modi, Mihir\linebreak
+			Pelkey, Tristan\linebreak
 			
-		\end{flushleft}
+		\end{center}
 	\end{minipage}\\[2 cm]
 	
 	\vfill
@@ -149,97 +148,117 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ABSTRACT}
-The abstract is a summary of your proposal. In general, your abstract should have enough information so that if I was to copy and paste your abstract into a web site, people would get the general idea of what your proposal is about. It should not go into any heavy detail, just the basics of what your project is about. The who, the what, and the why. You should keep your abstract to 200-400 words. Use this to ``hook in'' your reader.
+Team High Voltage's project provides a solution to keeping passwords safe while allowing quick access. Passwords have always been an annoyance to keep track of, so people reuse the same passwords for different websites, increasing their vulnerability. Our proposed solution is to use an RFID tag to access then decrypt a file with all the user's passwords, and send those passwords to the user's smartphone or computer using Bluetooth Low Energy. The file will be encrypted to ensure it is safe while stored on the board. The user will no longer have to worry about using the same password and have the confidence that their passwords and online accounts are secure.  
 
 \section{INTRODUCTION}
-While the abstract and introduction may seem like it is similar, remember that your abstract should have enough information to stand on its own. The introduction is really the actual start to your proposal. Here you should introduce the project, the people involved and give a short introduction to the why you are doing this. This should be 1-3 paragraphs.
+Passwords are used to keep all of our information secure, from our emails to files we want to keep safe. Human behavior often reduces the effectiveness of the passwords we use, as people should use a different password for each system, but people rarely do so. For our project, we will be creating an offline password manager. This will allow us to be able to keep control of the many passwords we regularly use. Our team consists of Mihir Modi, Wren Latcham, Wyatt Kacmarynski, Moksh Jani, and Tristan Pelkey.
+
+To create this password manager we will use Radio Frequency Identification (RFID) and Bluetooth Low Energy (BLE) to communicate with our device. This device will then be able to decrypt a password file and send that file to a phone or other Bluetooth device using BLE. 
+
 
 \section{FEATURES}
-Your Features section must include a listing of at least three key features that makes your project unique. Each item needs to be backed up with a description of what it will do and why. A listing of just three items is not enough, you need to describe what those features are and why your group feels they are needed. For that reason your features should have a paragraph for each key item that describes what that key feature is. A key feature should be something that is significant to your project. For example, a key feature an autopilot system is the ability to be able to set an altitude and the autopilot will automatically set the airspeed. That is a significant feature that has a large impact on that system.
+\begin{table}[ht]
+    \caption{Three Key (Required) Features}
+    \label{table:reqFeatures}
+    \begin{center}
+        \begin{tabular}{|l|}
+            \hline
+            1. Use RFID/NFC (or a password sent over BLE) \\
+            %\hline
+            2. Decrypt a Password File \\
+            %\hline
+            3. Send requested Password(s) to a Phone using BLE \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
+Our project will first have to be able to accept a valid authentication token (either a password sent over BLE, or an RFID/NFC badge being scanned). This ensures the password file can only be opened by someone who has been granted access. If there is not a valid authentication token presented, the device will not proceed further, and after a certain number of tries can be disabled for a length of time to prevent further attempts, increasing security.
 
-% Below is an example of inserting an image.  Not that LaTex
-% will determine the best location for the image.  Make sure
-% you replace this image with yours and place a proper caption.
-% You can use the \label{name} to name the figure and then reference
-% it from your writeup and LaTeX will automatically give it the correct
-% number. 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=4.5in]{cpx01.jpg}
-\caption{This is the Circuit Playground Express}
-\label{fig:cpx}
-\end{figure}
+The file will be kept encrypted until it is requested. Since the file will be kept encrypted, it will have to be decrypted when the user requests access. This will keep the password file from being compromised by an unauthorised user trying to gain direct access to the device.
 
-\section{PROBLEM STATEMENT}
-Here you will go into more detail on what problem you hope to solve or address.  You should discuss what the problem is and why it is important to solve it. In this section, you need to be clear on what the problem is, so do not think of this as a ``light'' section. It helps to define your project.
-
-Your team needs to do some research into the problem at hand. Becuase of that, you should have around two to three references that you are pulling from. There are lots of places you can find references from including the ISU library and Google Scholar. I would also suggest looking at Adafruit's website, as you may find inspiration or looking to improve something already there. Remember to cite your sources though. If you find something online, that can often be citation.
-
-When you create your ``ref.bib'' file, don't forget to follow the standards for a BiBTex file. Certain things like webistes requires certain keywords for it to render properly. There are lots of sources online to help with this and many places like the ISU Library and Google Scholar can also generate text that is compatible with a BiBTex file. Once you have your Bib file ready, don't forget to cite your citations in your proposal like this \cite{einstein} or this \cite{dirac}.
-
-\section{PROBLEM SOLUTION}
-Here go over your approach to your solution and what your solution is. You must include at least one image that shows your concept. This image can be a sketch or drawing or some pictures that show your concept. Make sure you reference the image(s) like this - Figure \ref{fig:cpx}. Finally, make sure you replace the stock image I included. You should also reference any sources you had from your problem statement as well.
-
-You must also include a table that lists all the parts that you wish to have. As announced in class, you will have the parts listed in Table \ref{table:parts_list}. We have plenty of two additional parts. Those are a conductive adhesive strip and a neopixel strip. I do have some other parts, such as arcade buttons and some additional sensors. You can certainly ask for something, and I will see what I can do. Change the table below to reflect the parts you are requesting.
+After this, the user will be able to request what file they want through a BLE terminal connection. The microcontroller will then send the password over the same BLE terminal to the user's phone, allowing them to use this password. It will then re-encrypt the password file.
 
 \begin{table}[ht]
-  \caption{Parts available for teams}
-  \label{table:parts_list}
-  \begin{center}
-  \begin{tabular}{|p{3in}|c|}
-  
-  \hline
-  Part description & Qty\\
-  \hline
-  \hline
-  Adafruit Circuit Playground Express & 1 \\
-  \hline
-  AAA Battery Holder & 1 \\
-  \hline
-  USB Cable & 1 \\
-  \hline
-  \end{tabular}
-  \end{center}
-  \end{table}
+    \caption{Three Stretch Goals}
+    \label{table:optFeatures}
+    \begin{center}
+        \begin{tabular}{|l|}
+            \hline
+            1. Implement Two-Factor Authentication \\
+            %\hline
+            2. Send Whole Files \\
+            %\hline
+            3. Wireless File Management \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
-Finally, you can also include any pseudo code or any code snippets you have gathered so far.  This is not required, but if you found some starter code or came up with some ideas for the code, put it here. If you want to embed code into \LaTeX, you can use the example below on how to do this in \LaTeX.
+In addition to the 3 key features (see Table \ref{table:reqFeatures}), our group decided to add stretch goals that we hope to finish, but drastically increase the difficulty of the project, these features are listed in Table \ref{table:optFeatures}. The first (comparatively simple) feature, would be the addition of Two-Factor Authentication. Ideally a login includes something you have, and something you know; we can implement this by requiring the user both scan a RFID/NFC badge, and enter a password. The second additional feature would include adding the ability to send whole files. While this would be slow, this would add another feature and allow users to store multiple files on the device instead of just one. The final (and most difficult) additional feature our group wants to add is the ability to manage this device over WiFi. This would be a much more convenient way to manage the device, allowing a user to manage what other users are allowed access, and/or passwords/files are stored on this device.
 
-\begin{lstlisting}[language=Arduino]
-#include <Adafruit_CircuitPlayground.h>
 
-void setup() {
-  CircuitPlayground.begin();
-}
+\section{PROBLEM STATEMENT}
 
-void loop() {
-  CircuitPlayground.clearPixels();
+For years, people have tried to hold themselves to the standard of using different, safe passwords for each of their online accounts. However, in a study done by Gaw and Felton at Princeton University where they surveyed 49 undergraduate students, they found that the majority had less than 3 passwords, and frequently the passwords were re-used across different account logins \cite{passw-strats}. While this study might be considered old in some fields (it was published in 2006), its primary focus is on human behavior relating to password security, which has not changed significantly since then. The meaning behind this study is that many people, while claiming to want a different password for each of their accounts, quickly realize that re-using one or two passwords is easier. Most people only think of human attackers and not automated tools that can try thousands of passwords a second, so their passwords are relatively insecure due to their misunderstanding of how their password can be cracked\cite{passw-strats}.
 
-  delay(500);
+Another context that aggravates this reuse of passwords is the online versus real world interactions. When using passwords in the real world, such as at an ATM, unlocking a phone, or a keypad lock to a computer lab, the human mind can learn to correlate that specific password pattern to the physical stimuli surrounding it (eg: location, or phone) when the passwords are used regularly. In this way, the passwords do not have to be the same but the person's mind will easily remember it. For an online interaction, where website after website all start to blend together, having a multitude of passwords can be hard due to the rarity at which people visit specific websites, leading to people choosing to reuse the same handful of (often insecure) passwords\cite{passw-strats}. A study from Carnegie Mellon University confirms this, stating that users understand they should create a different password for each distinct website, but most do not. They go on to state, "these behaviors are likely rational coping strategies for users who are asked to make far more distinct, complex passwords than they could possibly remember." \cite{user-percept}
 
-  CircuitPlayground.setPixelColor(0, 255,   0,   0);
-  CircuitPlayground.setPixelColor(1, 128, 128,   0);
-  CircuitPlayground.setPixelColor(2,   0, 255,   0);
-  CircuitPlayground.setPixelColor(3,   0, 128, 128);
-  CircuitPlayground.setPixelColor(4,   0,   0, 255);
-  
-  CircuitPlayground.setPixelColor(5, 0xFF0000);
-  CircuitPlayground.setPixelColor(6, 0x808000);
-  CircuitPlayground.setPixelColor(7, 0x00FF00);
-  CircuitPlayground.setPixelColor(8, 0x008080);
-  CircuitPlayground.setPixelColor(9, 0x0000FF);
- 
-  delay(5000);
-}
-\end{lstlisting}
+In the context of an industry, an example of poor password management leading to a company disaster is the Equifax data breach from September 2017. According to the Federal Trade Commission, a data breach at that time exposed 147 million people's data and the settlement for that included up to \$425 million for people affected by it\cite{equi-breach}. Additionally, over 70\% of employees reuse personal passwords at work and this correlates strongly with breaches, as 81\% of hacking breaches are due to weak passwords\cite{nd-breaches}. Because people's personal passwords are not very secure, when these same, insecure passwords are used to access important company files, it makes the company vulnerable to attacks on its data, similar to what happened to Equifax. Another example of this is the recent Dropbox data breach, where a reused user password led to 60 million credentials being stolen\cite{nd-breaches}. Poor personal password management is starting to lead to poor password practices in many industries, which is a high-risk security issue for the companies.
+
+\section{PROBLEM SOLUTION}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=4.5in]{Bluetooth_Technology_Overview_Graphic.jpg}
+\caption{Overview of Bluetooth Technology}
+\label{fig:bluetooth-info}
+\end{figure}
+
+To solve this problem we have developed a system to securely store a file of all your passwords. To solve this problem, High Voltage will build a system that will encrypt a file of passwords. The chip on the Adafruit CLUE board is the nRF52840, and Nordic Semiconductor has a cryptography library we could potentially use to run SHA-256 encryption \cite{cryt-lib}. To access the file a user will have to use their RFID badge which will trigger a decryption of the password file. Then, using BLE, the clue board will send the requested password to a phone. Now the user can safely view their requested password while keeping it safe from attacks. This allows the user the safety to not have to use the same password for multiple sites, especially since the file is only a tap away from being accessed. 
+
+In addition, BLE is capable of sending the file swiftly. According to Bluetooth SIG inc, BLE should have file transfer speeds starting at 125 Kb/sec, which is more than sufficient for reading passwords, as each character is only 1 byte, giving us 125,000 bytes/sec. \cite{ble-info} This can also be seen in Figure \ref{fig:bluetooth-info}, which compares Bluetooth Low Energy to Bluetooth Classic.
+
+To be able to complete this project, High Voltage will need parts listed in Table \ref{table:parts_list}. This list of parts will allow our team to solve the problem with all the capabilities shown in the Section III.
+
+\begin{table}[!h]
+    \caption{Parts needed by High Voltage}
+    \label{table:parts_list}
+    \begin{center}
+        \begin{tabular}{|p{3in}|c|}
+            \hline
+            Part description & Qty\\
+            \hline
+            \hline
+            Adafruit Clue & 1 \\
+            \hline
+            Adafruit DragonTail for micro:bit & 1 \\
+            \hline
+            AAA Battery Holder & 1 \\
+            \hline
+            USB Cable & 1 \\
+            \hline
+            Half Size Solderless Breadboard & 2 \\
+            \hline
+            Breadboard Jumper Wires & N/A \\
+            \hline
+            RFID/NFC Breakout Board & 1 \\
+            eg: \href{https://www.adafruit.com/product/364}{The Adafruit PN532} & \\
+            \hline
+            ESP8266 & 1 \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
 
 \section{CONCLUSION}
-Finally, wrap up your proposal. This only needs to be one or two paragraphs, but it should conclude with what you plan to do and the why and how. Yes, this may seem repetitive, but that is intentional. Do not forget to update your references as those will appear below in a seperate page.
+Implementing encryption is a great way to protect sensitive data from falling into the wrong hands. Using a combination of hardware and software, we can create a secure system to easily encrypt and access user data, such as passwords. The use of this password manager would provide a great open-source multi-device offline alternative to the current closed source online password managers. In order to mitigate the chances of your accounts being compromised, it is vital to understand the importance of proper password management and avoid the reuse of passwords. 
+
 
 \newpage
 %\section{References}
-\printbibliography[heading=subbibintoc]
+\printbibliography
 %\bibliographystyle{plain}
 %\bibliography{ref}
-
 \end{document}
